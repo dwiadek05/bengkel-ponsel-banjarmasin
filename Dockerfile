@@ -8,7 +8,7 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql
 COPY index.php /var/www/html/
 COPY src/ /var/www/html/src/
 
-# Beri izin untuk direktori yang dibutuhkan (jika ada)
+# Beri izin untuk direktori yang dibutuhkan
 RUN chown -R www-data:www-data /var/www/html
 RUN chmod -R 755 /var/www/html
 
