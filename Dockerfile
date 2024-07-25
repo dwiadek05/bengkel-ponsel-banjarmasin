@@ -10,8 +10,9 @@ COPY . /var/www/html
 # Set direktori kerja
 WORKDIR /var/www/html
 
-# Beri izin untuk menyimpan cache dan log
-RUN chown -R www-data:www-data /var/www/html/application/cache /var/www/html/application/logs
+# Buat direktori cache dan logs jika belum ada, kemudian berikan izin
+RUN mkdir -p /var/www/html/application/cache /var/www/html/application/logs \
+    && chown -R www-data:www-data /var/www/html/application/cache /var/www/html/application/logs
 
 # Enable mod_rewrite
 RUN a2enmod rewrite
