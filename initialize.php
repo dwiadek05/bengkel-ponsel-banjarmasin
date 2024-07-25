@@ -11,7 +11,7 @@ $dev_data = array(
 );
 
 if (!defined('base_url'))
-    define('base_url', 'http://localhost/BengkelPonselBanjarmasin/');
+    define('base_url', 'http://185.201.9.103');
 if (!defined('base_app'))
     define('base_app', str_replace('\\', '/', __DIR__) . '/');
 if (!defined('dev_data'))
