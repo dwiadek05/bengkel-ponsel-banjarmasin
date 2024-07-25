@@ -4,8 +4,9 @@ FROM php:7.4-apache
 # Install ekstensi yang dibutuhkan
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-# Copy seluruh source code ke dalam container
-COPY . /var/www/html/
+# Copy file index.php dan direktori src ke dalam container
+COPY index.php /var/www/html/
+COPY src/ /var/www/html/src/
 
 # Beri izin untuk direktori yang dibutuhkan (jika ada)
 RUN chown -R www-data:www-data /var/www/html
